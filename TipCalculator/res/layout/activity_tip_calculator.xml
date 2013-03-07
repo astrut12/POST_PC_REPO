@@ -47,9 +47,7 @@
         android:layout_below="@id/chkRound"
         android:text="@string/calculate"
         android:onClick="onCalculateClick" />
-        
-    <!-- -->
-        
+
     <TextView
         android:id="@+id/txtTipResult"
         android:layout_width="wrap_content"
