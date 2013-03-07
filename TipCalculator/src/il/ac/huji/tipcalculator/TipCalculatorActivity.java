@@ -31,15 +31,14 @@ public class TipCalculatorActivity extends Activity {
     	TextView txtTipResult = (TextView) findViewById(R.id.txtTipResult);
     	CheckBox chkRound = (CheckBox) findViewById(R.id.chkRound);
     	
-    	// Invalid behavior.
-    	if (edtBillAmount.getText().toString().equals(""))
-    	{
-    		txtTipResult.setText("");
-    		return;
-    	}
-    	
     	// Retrieve information.
-    	double bill =  Double.valueOf(edtBillAmount.getText().toString());
+		double bill;
+		try { //Return if entered string is not a valid number.
+			bill = Double.valueOf(edtBillAmount.getText().toString());
+		} catch (NumberFormatException e) {
+			txtTipResult.setText("");
+			return;
+		}
     	boolean toRound = chkRound.isChecked();
     	
     	// Calculate and display tip.
