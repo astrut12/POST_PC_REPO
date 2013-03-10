@@ -10,7 +10,7 @@ import android.widget.TextView;
 
 public class TipCalculatorActivity extends Activity {
 
-	public final static double TIP_PERCENTAGE = 10.0 / 100; 
+	public final static double TIP_PERCENTAGE = 12.0 / 100; 
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
