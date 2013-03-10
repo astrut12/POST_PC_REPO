@@ -43,7 +43,7 @@ public class TipCalculatorActivity extends Activity {
     	
     	// Calculate and display tip.
     	double tip = bill * TIP_PERCENTAGE; 
-    	String tipText = toRound ? String.format("%d", (int) Math.ceil(tip)) : String.format("%.2f", tip);
+    	String tipText = toRound ? String.format("%d", (int) Math.round(tip)) : String.format("%.2f", tip);
     	
     	txtTipResult.setText(getString(R.string.tip_result) + tipText);
     	
